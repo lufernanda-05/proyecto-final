@@ -1,4 +1,13 @@
-import servidor from "./servidor.js";
-servidor.listen(3000, ()=>{
-    console.log("El servidor esta escuchando el link http://localhost:3000");
+import app from './servidor.js';
+import dotenv from 'dotenv';
+import connectDB from './conexion.js';
+
+dotenv.config();
+
+const PORT = process.env.PORT || 3000;
+
+connectDB().then(() => {
+  app.listen(3000, () => {
+    console.log(`Servidor escuchando en http://localhost:3000`);
+  });
 });
