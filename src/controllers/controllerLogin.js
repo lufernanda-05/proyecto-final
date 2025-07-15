@@ -19,3 +19,4 @@ export const login = async (req, res) => {
     res.status(500).json({ message: 'Error al iniciar sesión', error: error.message });
   }
 };
+

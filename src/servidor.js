@@ -21,7 +21,6 @@ app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
 app.use('/api/users', userRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/tasks', taskRoutes);
-
 app.get('/test', (req, res) => {
   res.json({ message: 'Ruta de prueba funcionando' });
 });

@@ -14,6 +14,15 @@ export const createUser = async (req, res) => {
   }
 };
 
+export const getUsers = async (req, res) => {
+  try {
+    const users = await User.find().select('-password');  // Excluye el campo password para seguridad
+    res.json(users);
+  } catch (error) {
+    res.status(500).json({ message: 'Error al obtener usuarios', error: error.message });
+  }
+};
+
 export const updateUser = async (req, res) => {
   try {
     const { id } = req.params;
