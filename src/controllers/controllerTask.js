@@ -59,4 +59,3 @@ export const deleteTask = async (req, res) => {
     res.status(500).json({ message: 'Error al eliminar tarea', error: error.message });
   }
 };
-

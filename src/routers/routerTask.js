@@ -10,4 +10,3 @@ router.put('/:id', auth, updateTask);
 router.delete('/:id', auth, deleteTask);
 
 export default router;
-

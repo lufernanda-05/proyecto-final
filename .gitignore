@@ -1,0 +1,29 @@
+# Directorios de dependencias de Node.js
+node_modules/
+
+# Archivos de configuración de entorno (importante por seguridad)
+.env
+.env.*
+.env.local
+
+# Build artifacts (para el front-end Angular)
+dist/
+
+# Archivos de depuración y logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Directorios de caché y temporales
+.angular/cache/ # Para el front-end (Angular)
+tmp/
+temp/
+
+# Editor/IDE specific files (opcional, si no son configuraciones compartidas de equipo)
+.vscode/
+.idea/
+
+# Archivos específicos del sistema operativo
+.DS_Store # macOS
+Thumbs.db # Windows

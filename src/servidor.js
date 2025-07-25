@@ -26,7 +26,9 @@ app.get('/test', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  res.send('API de Sistema de Agendamiento de Tareas');
+  res.send(' Sistema de Agendamiento de Tareas');
 });
+
+
 
 export default app;
