@@ -17,6 +17,7 @@ export const login = async (req, res) => {
     res.json({ 
       token, 
       user: {
+        _id: user._id.toString(),   // Asegúrate de enviar el ID como string
         nombre: user.nombre,
         email: user.email,
         imagen: user.imagen ? `http://localhost:3000/uploads/${user.imagen}` : null
