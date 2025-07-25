@@ -14,9 +14,17 @@ export const login = async (req, res) => {
       return res.status(400).json({ message: 'Credenciales inválidas' });
     }
     const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
-    res.json({ token });
+    res.json({ 
+      token, 
+      user: {
+        nombre: user.nombre,
+        email: user.email,
+        imagen: user.imagen ? `http://localhost:3000/uploads/${user.imagen}` : null
+      }
+    });
   } catch (error) {
     res.status(500).json({ message: 'Error al iniciar sesión', error: error.message });
   }
 };
+
 
